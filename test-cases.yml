@@ -695,3 +695,39 @@
       - Нажать "Dark"
     expected-result: |
       Цвет консоли меняется на светлый и темный     
+
+- summary: |
+      Проверка открытия в разных браузерах в декстопной версии
+    requirement: |
+      Сайт должен быть совместим с последней версией браузера
+    prerequisites: 
+      Открыт сайт https://codebattle.hexlet.io/.
+    test-data: |
+      Браузеры = Safari, Chrome, Yandex, Firefox.
+      Девайс для проверки = mac OS Sonoma 14.5
+    steps:
+      - Нажать на последнюю версию браузера 
+      - Ввести URL приложения
+      - Нажать "ENTER"
+      - Нажать "Sign in"
+      - Нажать "Sign in with GitHub" 
+      - Проскроллить страницу
+    expected-result: |
+      Сайт открывается корректно, наполнение страницы отображается корректно
+      
+- summary: |
+      Проверка на наличие мобильной версии
+    requirement: |
+      Сайт должен иметь мобильную версию 
+    prerequisites: |
+      Открыт сайт https://codebattle.hexlet.io/ 
+    test-data: |
+      Девайс для проверки =  Iphone 14 Pro
+    steps:
+      - Проскроллить страницу 
+      - Нажать "Create a game"
+      - Нажать "With a bot"
+      - Нажать "Create battle"
+    expected-result: |
+      На экран выводится корректно сверстанный сайт, функциональность основных кнопок работает
+    
